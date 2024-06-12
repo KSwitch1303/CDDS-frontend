@@ -14,7 +14,7 @@ function App() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5068/diagnose', formData);
+            const response = await axios.post('https://cdds-backend.onrender.com', formData);
             setDiagnosis(response.data.diagnosis);
         } catch (error) {
             console.error('Error:', error);
